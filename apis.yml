@@ -1,23 +1,74 @@
 aid: atonarp
+
 name: Atonarp
-description: 'Atonarp is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Atonarp Inc. develops advanced digital molecular profiling technologies for semiconductor manufacturing, industrial process control, pharmaceutical production, and EV battery fabrication. Their in‑situ, high‑speed, high‑sensitivity mass spectrometry platforms enable real‑time monitoring and decision‑making, improving efficiency, reducing waste, and lowering costs across multiple industries.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atonarp/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Semiconductor
+- Molecular Profiling
+- Industrial Automation
+- Pharmaceuticals
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/atonarp-llms.txt
+- type: Hosts
+  url: hosts/atonarp-hosts.yml
+- type: Vendors
+  url: vendors/atonarp-vendors.yml
+- type: Newsroom
+  url: https://atonarp.com/news/
+- type: DomainSecurity
+  url: security/atonarp-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://atonarp.com/
+- type: About
+  url: https://atonarp.com/about/
+- type: Solutions
+  url: https://atonarp.com/solutions/
+- type: Products
+  url: https://atonarp.com/products/
+- type: PrivacyPolicy
+  url: https://atonarp.com/privacy-policy/
+- type: Contact
+  url: https://atonarp.com/contact/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: "API host https://api.atonarp.com returned no usable OpenAPI or GraphQL spec despite probing common endpoints."
+  evidence:
+    - url: https://api.atonarp.com/openapi.json
+      status: error
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

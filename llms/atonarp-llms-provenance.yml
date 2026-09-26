@@ -1,0 +1,6 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-llms.py
+source: https://atonarp.com/llms.txt
+bytes: 1480
+note: saved verbatim; the provider's own document

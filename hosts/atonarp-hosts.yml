@@ -1,0 +1,54 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.atonarp.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: atonarp.com
+  role: api
+  relation: own
+- host: atonarp.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - About
+  - Solutions
+  - Products
+  - PrivacyPolicy
+  - Contact
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: atonarp.com
+  role: website
+  relation: own
+- host: projects.atonarp.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atonarp.com
+  role: other
+  relation: own
